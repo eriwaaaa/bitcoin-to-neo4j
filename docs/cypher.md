@@ -8,7 +8,7 @@ Here are some example Cypher queries for getting useful data out of the Bitcoin 
 
 ```
 MATCH (start :block {height:100})-[chain :chain*0..4]->(block :block)-[:coinbase]->(cb :output)-[:in]->(coinbasetx :tx)
-RETURN block, cb
+RETURN block, kb
 ```
 
 Return a chain of blocks from a particular starting height, along with the coinbase (containing the block reward) from each block.
